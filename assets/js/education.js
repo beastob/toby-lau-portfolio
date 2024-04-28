@@ -113,7 +113,7 @@ const showCards = () => {
   moocscards.forEach(
     ({ title, cardImage, moocLink }) =>
       (output += `        
-        <div class="col-6 col-md-3 col-sm-4 column" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600" >  
+        <div class="col-6 col-md-3 col-sm-4 column" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="100" >  
             <div class="card mb-3 mx-auto">
                <div class="content">
                   <div class="content-overlay"></div>
@@ -138,19 +138,14 @@ document.addEventListener("DOMContentLoaded", showCards);
 const bagdes = document.querySelector(".badges");
 const badgesection = [
   {
-    title: "Google Developer Essentials",
-    image: "assets/images/education-page/badge1.png",
-    description: "Earned May 20, 2020",
+    title: "Certified Kubernetes Administer",
+    image: "assets/images/education-page/cka_badge.png",
+    description: "Earned March 1, 2021",
   },
   {
-    title: "VM Migration",
-    image: "assets/images/education-page/badge2.png",
-    description: "Earned June 20, 2020",
-  },
-  {
-    title: "G Suite Essentials",
-    image: "assets/images/education-page/badge3.png",
-    description: "Earned July 20, 2020",
+    title: "Azure Administrator Associate",
+    image: "assets/images/education-page/azure-administrator-associate.png",
+    description: "Earned August 19, 2021",
   },
 ];
 
@@ -160,7 +155,7 @@ const showCards1 = () => {
     ({ title, image, description }) =>
       (output += `       
       <div class="col-lg-4 col-md-6 p-2" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600"> 
-        <img class="img-fluid d-block mb-3 mx-auto hvr-grow" src="${image}" alt="Card image cap" width="200">
+        <img class="img-fluid d-block mb-3 mx-auto hvr-grow" src="${image}" alt="Card image cap" height="200" width="200">
           <div class="text-center font-weight-bolder" style="font-size: 1.3em;">${title}</div>
           <div class="text-center text-muted font-weight-bolder p-2">${description}</div>
       </div>`)
