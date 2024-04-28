@@ -30,7 +30,7 @@ let header = $(`
    <li class="nav-item nav-item-hover"><a class="nav-link" href="education.html">Education</a></li>
    <li hidden class="nav-item nav-item-hover"><a class="nav-link" href="https://hashnode.com/" target="_blank">Blogs</a></li>
    <li class="nav-item">
-   <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()" checked>
+   <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()" unchecked>
    </li>
    <div class="bike">
    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-80 0 650 400" preserveAspectRatio="xMinYMin meet">
@@ -139,7 +139,7 @@ let footer = $(`
                 <h6 class="display">Get in Touch</h6>
               </div>
                 <form name="form1" action="https://formcarry.com/s/kzxdCtvFe9y" method="POST" accept-charset="UTF-8" >
-                <input type="hidden" name="_next" value="https://toby-lau-portfolio.beastob.com/">
+                  <input type="hidden" name="_next" value="https://toby-lau-portfolio.beastob.com/">
                   <input id="name" type="text" name="name" placeholder="Your Name" required/>
                   <input id="email" type="email" name="email" placeholder="Email Address" required/>                  
                   <textarea id="textArea" name="message" placeholder="Type your Message" required></textarea>
@@ -365,6 +365,8 @@ $(document).ready(function () {
 });
 
 //consistent light mode for page change
+localStorage.setItem("lightMode", "light"); //set Light-mode as default
+
 if (localStorage.getItem("lightMode") == "light") {
   var app = document.getElementsByTagName("HTML")[0];
   app.setAttribute("light-mode", "light");
